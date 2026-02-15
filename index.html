@@ -1,56 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Video</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarPosterrs</title>
 
-    h1 {
-      margin: 20px 0;
-      font-size: 2rem;
-      text-align: center;
-    }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
 
-    .video-container {
-      width: 90%;
-      max-width: 800px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-      border-radius: 12px;
-      overflow: hidden;
-    }
+/* Instagram Card */
+.instagram-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 15px 25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    transition: 0.3s ease;
+}
 
-    video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+.instagram-card:hover {
+    transform: scale(1.05);
+}
 
-    .footer {
-      margin-top: 20px;
-      font-size: 0.9rem;
-      text-align: center;
-      color: #aaa;
-    }
-  </style>
+/* Profile Image */
+.instagram-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #d62976;
+}
+
+/* Username */
+.username {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Follow Button */
+.follow-btn {
+    margin-left: 15px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.follow-btn:hover {
+    opacity: 0.8;
+}
+
+/* Video */
+.video-container {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+</style>
 </head>
+
 <body>
-  <div class="video-container">
+
+<div class="instagram-card">
+    <img src="logo.png" alt="Instagram Profile">
+    <div>
+        <div class="username">@carposterrs</div>
+        <div style="font-size:0.9rem;color:#ccc;">Bizi instagramda izləyin</div>
+    </div>
+    <a class="follow-btn" href="https://www.instagram.com/carposterrs/" target="_blank">
+        Follow
+    </a>
+</div>
+
+<div class="video-container">
     <video controls poster="poster.jpg">
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+        <source src="video.mp4" type="video/mp4">
     </video>
-  </div>
+</div>
+
 </body>
 </html>
